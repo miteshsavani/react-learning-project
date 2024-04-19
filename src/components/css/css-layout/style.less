@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    min-height: 300px;
+    height: 100%;
+    border: 1px solid black;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 1fr 1fr 100px;
+    gap:10px;
+    padding:10px;
+}
+
+.container div {
+    padding:10px;
+    border: 1px solid black;
+}
+
+.header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.contentLarge {
+    grid-row-start: 2;
+    grid-row-end: span 2;
+}
+
+.footer {
+    grid-column: 1 / span 3;
+}

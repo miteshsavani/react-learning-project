@@ -1,0 +1,83 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html,
+body,
+#root {
+	min-height: 100% !important;
+	height: 100%;
+}
+* {
+	box-sizing: border-box;
+}
+.app {
+	display: flex;
+	height: 100%;
+	overflow: hidden;
+}
+.sidebar {
+	flex: 1;
+	background-color: gray;
+	font-size: 18px;
+	color: greenyellow;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	min-width: 131px;
+
+	.sidebarWrapper {
+	}
+
+	.sidebarList {
+		display: flex;
+		flex-direction: column;
+	}
+
+	ul li {
+		list-style-type: none;
+		margin: 8px;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+
+	ul li:hover {
+		background-color: yellowgreen;
+
+		a {
+			color: black;
+		}
+	}
+
+	li > a {
+		width: 100%;
+		text-decoration: none;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 45px;
+	}
+
+	.sidebarListItem {
+		cursor: pointer;
+		padding: 5px;
+		display: flex;
+		align-items: center;
+	}
+}
+
+.active {
+	background-color: red;
+	color: #fff;
+}
+
+.content {
+	flex: 7;
+	display: flex;
+	flex-direction: column;
+	//padding: 30px 10px;
+	overflow-y: auto;
+}

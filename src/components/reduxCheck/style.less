@@ -1,0 +1,149 @@
+.container {
+	margin: 0 auto;
+	width: 100%;
+	justify-content: center;
+	display: flex;
+}
+
+.block {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
+
+	.buttonBlock {
+		display: grid;
+		width: 70%;
+		padding: 10px 0;
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		grid-gap: 1rem;
+
+    button {
+      height: 30px;
+    }
+	}
+
+	.imgBlock {
+		//display: flex;
+		//justify-content: space-around;
+		width: 100%;
+		//flex-wrap: wrap;
+		max-height: 700px;
+		overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    place-items: center;
+
+		div {
+			overflow: hidden;
+			margin: 10px 0;
+			border-radius: 5px;
+		}
+
+		img {
+			
+			transition: transform .2s;
+			display: block;
+
+			// see youtube video for below https://www.youtube.com/watch?v=qm0IfG1GyZU&ab_channel=GoogleChromeDevelopers
+			//flex: 0 1 300px; /* no stretching */
+			//flex: 1 1 300px; /* stretching */
+		}
+
+		div:hover img{
+			transform: scale(1.3);
+			transform-origin: 50% 50%;
+		}
+
+		img {
+			//-webkit-animation: flip 1s;
+			//animation: flip 1s;
+		}
+		@-webkit-keyframes flip {
+			from {
+				transform: rotateY(90deg);
+			}
+			to {
+				transform: rotateY(0deg);
+			}
+		}
+		@keyframes flip {
+			from {
+				transform: rotateY(90deg);
+			}
+			to {
+				transform: rotateY(0deg);
+			}
+		}
+	}
+}
+
+@-webkit-keyframes image_blur {
+	0% {
+		-webkit-filter: blur(0px);
+	}
+	5% {
+		-webkit-filter: blur(1px);
+	}
+	10% {
+		-webkit-filter: blur(2px);
+	}
+	15% {
+		-webkit-filter: blur(3px);
+	}
+	20% {
+		-webkit-filter: blur(4px);
+	}
+	25% {
+		-webkit-filter: blur(5px);
+	}
+	30% {
+		-webkit-filter: blur(6px);
+	}
+	35% {
+		-webkit-filter: blur(7px);
+	}
+	40% {
+		-webkit-filter: blur(8px);
+	}
+	45% {
+		-webkit-filter: blur(9px);
+	}
+	50% {
+		-webkit-filter: blur(10px);
+	}
+	55% {
+		-webkit-filter: blur(9px);
+	}
+	60% {
+		-webkit-filter: blur(8px);
+	}
+	65% {
+		-webkit-filter: blur(7px);
+	}
+	70% {
+		-webkit-filter: blur(6px);
+	}
+	75% {
+		-webkit-filter: blur(5px);
+	}
+	80% {
+		-webkit-filter: blur(4px);
+	}
+	85% {
+		-webkit-filter: blur(3px);
+	}
+	90% {
+		-webkit-filter: blur(2px);
+	}
+	100% {
+		-webkit-filter: blur(0px);
+	}
+}
+
+.blur {
+	animation: image_blur 1s;
+}
